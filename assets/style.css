@@ -24,6 +24,11 @@ h1,h3,.wordmark,.kpi-v{font-family:"Fjalla One","Arial Narrow",Arial,sans-serif;
 .warn{color:#B00020;font-weight:600;padding:8px 0}
 .chip{margin-right:16px;font-size:13px;white-space:nowrap}
 .chip-in{margin-right:5px;accent-color:var(--blue)}
+/* Well dropdown: fix white-on-white selected value text (Dash 4.x default) */
+#well,#well .dash-dropdown-value,#well .dash-dropdown-value-item{color:var(--ink)!important}
+
+/* Date picker: fix white-on-white date input text (Dash 4.x default) */
+.dash-datepicker-input{color:var(--ink)!important}
 @media(max-width:800px){.hero h1{font-size:26px}.topbar{padding:8px 16px}.wordmark{font-size:18px}.tagline{display:none}.page,.hero-in{padding-left:16px;padding-right:16px}}
 .tabs-parent,.tabs-body{border:0!important;padding:0!important}
 .tabs-bar{display:flex!important;flex-wrap:wrap;gap:10px;width:auto!important;border:0!important;background:transparent!important}

@@ -325,7 +325,7 @@ app.layout = html.Div([
         html.H1("Automated Reservoir & Production Engineering Surveillance"),
         html.Div(className="controls", children=[
             html.Label("Well"),
-            dcc.Dropdown(id="well", options=WELLS, value=WELLS[0] if WELLS else None, clearable=False, style={"width": "170px"}),
+            dcc.Dropdown(id="well", options=[{"label": w, "value": w} for w in WELLS], value=WELLS[0] if WELLS else None, clearable=False, style={"width": "170px"}),
             html.Label("Dates"),
             dcc.DatePickerRange(id="dates", start_date=D0, end_date=D1, min_date_allowed=D0, max_date_allowed=D1,
                                 display_format="MMM D, YYYY")])])),
