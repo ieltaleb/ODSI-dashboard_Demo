@@ -8,7 +8,7 @@
 Put one `.xlsx` workbook per well in `data/` (sheets Production History, PTA, Volume tracking). The app loads every workbook in the folder.
 `data/example_data.xlsx` is the first one.
 Sheets are found by keyword (a sheet with PTA in its name, one with Volume, and the production sheet).
-The well name is the workbook file name (A6.xlsx shows as A6). Use one file per well.
+The well name is the workbook file name. Use one file per well.
 The CSV files below are the older demo layout. They only load when the workbook is missing, except `eur.csv`, which is always used and is still demo data.
 
 ## Data files (all in `data/`)
