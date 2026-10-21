@@ -302,7 +302,7 @@ app = Dash(__name__, title="ODSI Reservoir Surveillance", external_stylesheets=[
     "https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:wght@400;600&display=swap"])
 server = app.server
 import dash_auth
-auth = dash_auth.BasicAuth(app, {os.environ["ODSI_Demo"]: "2026"})
+auth = dash_auth.BasicAuth(app, {os.environ['DASH_USER']: os.environ['DASH_PASS']})
 
 _all = [d["date"] for d in (PROD, PTA, VOL) if "date" in d]
 _dates = pd.concat(_all) if _all else pd.Series(dtype="datetime64[ns]")
