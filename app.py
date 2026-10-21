@@ -301,9 +301,8 @@ def eur_fig():
 app = Dash(__name__, title="ODSI Reservoir Surveillance", external_stylesheets=[
     "https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:wght@400;600&display=swap"])
 server = app.server
-if os.getenv("DASH_USER"):  # set DASH_USER and DASH_PASS on the host to require a login
-    import dash_auth
-    dash_auth.BasicAuth(app, {os.environ["DASH_USER"]: os.environ["DASH_PASS"]})
+import dash_auth
+auth = dash_auth.BasicAuth(app, {os.environ["ODSI_Demo"]: os.environ["2026"]})
 
 _all = [d["date"] for d in (PROD, PTA, VOL) if "date" in d]
 _dates = pd.concat(_all) if _all else pd.Series(dtype="datetime64[ns]")
